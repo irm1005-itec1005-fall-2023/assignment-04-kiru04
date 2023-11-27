@@ -28,29 +28,75 @@
   PAGE / BODY
 */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  background-image : url(images/images.jpg);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 200px auto;
+  background-color: #27254C;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #F2ECF8;
+}
+
+.input-container {
+  margin-top: 20px;
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #564A94;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9d93d2;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.task span {
+  color: #ddd;
+  flex: 1;
+}
+
+.delete-button {
+  background-color: #ff6666;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #fa9191;
 }

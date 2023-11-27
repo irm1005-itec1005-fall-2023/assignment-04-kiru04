@@ -8,7 +8,42 @@
 //
 // Variables
 //
+// Get the elements
+const newTaskInput = document.getElementById('new-task');
+const todoListContainer = document.getElementById('todo-list');
 
+// Function to add a new task
+function addTask() {
+    const taskText = newTaskInput.value;
+
+    if (taskText.trim() === '') {
+        alert('Please enter a task!');
+        return;
+    }
+
+    const taskElement = document.createElement('div');
+    taskElement.classList.add('task');
+
+    const taskTextElement = document.createElement('span');
+    taskTextElement.innerText = taskText;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.classList.add('delete-button');
+    deleteButton.onclick = function () {
+        taskElement.remove();
+    };
+
+    taskElement.appendChild(taskTextElement);
+    taskElement.appendChild(deleteButton);
+
+    todoListContainer.appendChild(taskElement);
+
+    // Clear the input field
+    newTaskInput.value = '';
+}
+
+/*
 // Constants
 const appID = "app";
 const headingText = "To do. To done. ✅";
@@ -40,4 +75,4 @@ function inititialise() {
 //
 // Inits & Event Listeners
 //
-inititialise();
+inititialise();*/
